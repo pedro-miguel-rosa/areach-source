@@ -1,0 +1,303 @@
+---
+import ThemeToggle from "../components/ThemeToggle.astro";
+import { supportEmail } from "../config/contact";
+import { siteUrl } from "../config/site";
+
+interface Props {
+    description: string;
+    lastUpdated: string;
+    title: string;
+}
+
+const { description, lastUpdated, title } = Astro.props;
+const canonicalPath = Astro.url.pathname === "/" ? "/" : Astro.url.pathname.replace(/\/$/, "");
+const canonicalUrl = `${siteUrl}${canonicalPath}`;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content={description} />
+        <meta name="theme-color" content="#07130c" data-theme-color />
+        <link rel="icon" type="image/png" sizes="128x128" href="/favicon.png" />
+        <link rel="canonical" href={canonicalUrl} />
+        <title>{title} · AReach</title>
+        <script is:inline>
+            (() => {
+                try {
+                    const storedTheme =
+                        window.localStorage.getItem("areach-theme");
+                    document.documentElement.dataset.theme =
+                        storedTheme === "light" ? "light" : "dark";
+                } catch {
+                    document.documentElement.dataset.theme = "dark";
+                }
+            })();
+        </script>
+        <style is:global>
+            :root {
+                color-scheme: dark;
+                --accent: #15b95b;
+                --background: #07130c;
+                --border: rgba(190, 255, 207, 0.16);
+                --card-shadow: 0 16px 48px rgba(0, 0, 0, 0.24);
+                --header-background: rgba(7, 19, 12, 0.82);
+                --surface: #0b1a11;
+                --surface-raised: #172c1d;
+                --text: #f4faf5;
+                --text-muted: #819689;
+                --text-secondary: #b0c1b4;
+                --theme-control-background: rgba(190, 255, 207, 0.08);
+                --theme-control-border: rgba(190, 255, 207, 0.24);
+                --theme-control-hover: rgba(190, 255, 207, 0.14);
+                --theme-control-text: #d5e5d8;
+                --theme-focus: #65eb95;
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                    "Segoe UI", sans-serif;
+                line-height: 1.6;
+                color: var(--text);
+                background: var(--background);
+            }
+
+            html[data-theme="light"] {
+                color-scheme: light;
+                --accent: #087f3e;
+                --background: #f1f7f3;
+                --border: #cfe0d3;
+                --card-shadow: 0 18px 48px rgba(20, 70, 39, 0.1);
+                --header-background: rgba(241, 247, 243, 0.94);
+                --surface: #ffffff;
+                --surface-raised: #eff8f1;
+                --text: #16231b;
+                --text-muted: #617768;
+                --text-secondary: #425a49;
+                --theme-control-background: rgba(12, 127, 62, 0.08);
+                --theme-control-border: rgba(12, 127, 62, 0.22);
+                --theme-control-hover: rgba(12, 127, 62, 0.14);
+                --theme-control-text: #0d2114;
+                --theme-focus: #0c9850;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                background: var(--background);
+                color: var(--text);
+                margin: 0;
+                min-width: 320px;
+                transition:
+                    background-color 420ms ease,
+                    color 420ms ease;
+            }
+
+            a {
+                color: var(--accent);
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            .site-header {
+                align-items: center;
+                background: var(--header-background);
+                border-bottom: 1px solid var(--border);
+                display: flex;
+                justify-content: space-between;
+                padding: 20px max(24px, calc((100vw - 1040px) / 2));
+                position: sticky;
+                top: 0;
+                backdrop-filter: blur(16px);
+                transition:
+                    background-color 420ms ease,
+                    border-color 420ms ease;
+                z-index: 1;
+            }
+
+            .brand {
+                color: var(--accent);
+                font-size: 1.15rem;
+                font-weight: 750;
+                letter-spacing: -0.02em;
+            }
+
+            .site-nav {
+                display: flex;
+                gap: 20px;
+                font-size: 0.92rem;
+            }
+
+            main {
+                margin: 0 auto;
+                max-width: 860px;
+                padding: 56px 24px 80px;
+            }
+
+            .back-link {
+                display: inline-block;
+                font-size: 0.92rem;
+                margin-bottom: 32px;
+            }
+
+            article {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 24px;
+                box-shadow: var(--card-shadow);
+                overflow: hidden;
+                transition:
+                    background-color 420ms ease,
+                    border-color 420ms ease,
+                    box-shadow 420ms ease;
+            }
+
+            .article-header {
+                background: var(--surface-raised);
+                border-bottom: 1px solid var(--border);
+                padding: 44px 48px 36px;
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.75rem;
+                font-weight: 750;
+                letter-spacing: 0.12em;
+                margin: 0 0 12px;
+                text-transform: uppercase;
+            }
+
+            h1,
+            h2,
+            h3 {
+                letter-spacing: -0.025em;
+                line-height: 1.2;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 5vw, 3.25rem);
+                margin: 0;
+            }
+
+            h2 {
+                font-size: 1.35rem;
+                margin: 36px 0 12px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+                margin: 24px 0 8px;
+            }
+
+            .lede {
+                color: var(--text-secondary);
+                font-size: 1.08rem;
+                margin: 18px 0 0;
+                max-width: 680px;
+            }
+
+            .updated {
+                color: var(--text-muted);
+                font-size: 0.88rem;
+                margin: 18px 0 0;
+            }
+
+            .content {
+                padding: 12px 48px 52px;
+            }
+
+            .content p,
+            .content li {
+                color: var(--text-secondary);
+            }
+
+            .content ul,
+            .content ol {
+                padding-left: 24px;
+            }
+
+            .content li + li {
+                margin-top: 8px;
+            }
+
+            .content strong {
+                color: var(--text);
+            }
+
+            .site-footer {
+                color: var(--text-muted);
+                font-size: 0.9rem;
+                margin: 0 auto;
+                max-width: 860px;
+                padding: 0 24px 40px;
+                transition: color 420ms ease;
+            }
+
+            @media (max-width: 640px) {
+                .site-header {
+                    align-items: flex-start;
+                    gap: 14px;
+                    padding: 16px 20px;
+                }
+
+                .site-nav {
+                    gap: 12px;
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+                }
+
+                main {
+                    padding: 32px 16px 56px;
+                }
+
+                article {
+                    border-radius: 18px;
+                }
+
+                .article-header {
+                    padding: 32px 24px 28px;
+                }
+
+                .content {
+                    padding: 8px 24px 36px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="site-header">
+            <a class="brand" href="/">AReach</a>
+            <nav class="site-nav" aria-label="Legal pages">
+                <a href="/privacy">Privacy</a>
+                <a href="/support">Support</a>
+                <a href="/terms">Terms</a>
+                <ThemeToggle />
+            </nav>
+        </header>
+
+        <main>
+            <a class="back-link" href="/">← Back to AReach</a>
+            <article>
+                <header class="article-header">
+                    <p class="eyebrow">AReach</p>
+                    <h1>{title}</h1>
+                    <p class="lede">{description}</p>
+                    <p class="updated">Last updated: {lastUpdated}</p>
+                </header>
+                <div class="content">
+                    <slot />
+                </div>
+            </article>
+        </main>
+
+        <footer class="site-footer">
+            AReach · Event-scoped social discovery for live professional events
+            · <a href={`mailto:${supportEmail}`}>Contact us</a>
+        </footer>
+    </body>
+</html>

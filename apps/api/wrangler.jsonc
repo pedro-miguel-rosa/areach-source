@@ -1,0 +1,22 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "areach-api-local",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-03-17",
+	"compatibility_flags": ["nodejs_compat"],
+	"vars": {
+		"BETTER_AUTH_URL": "http://localhost:8787",
+		"MODERATION_EMAIL": "moderation@example.invalid"
+	},
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./public"
+	},
+	"hyperdrive": [
+		{
+			"binding": "HYPERDRIVE",
+			"id": "00000000000000000000000000000000"
+		}
+	],
+	"send_email": [{ "name": "EMAIL" }]
+}

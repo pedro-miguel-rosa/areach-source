@@ -1,0 +1,800 @@
+{
+	"version": "7",
+	"dialect": "sqlite",
+	"id": "e5d5e9db-2f53-4403-bc6f-2ff05406e443",
+	"prevIds": ["d5d95da0-577b-4983-9789-49e4f531c5d1"],
+	"ddl": [
+		{
+			"name": "event_mutation",
+			"entityType": "tables"
+		},
+		{
+			"name": "local_event",
+			"entityType": "tables"
+		},
+		{
+			"name": "local_event_attendee",
+			"entityType": "tables"
+		},
+		{
+			"name": "local_profile",
+			"entityType": "tables"
+		},
+		{
+			"name": "profile_mutation",
+			"entityType": "tables"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "id",
+			"entityType": "columns",
+			"table": "event_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "viewer_id",
+			"entityType": "columns",
+			"table": "event_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "type",
+			"entityType": "columns",
+			"table": "event_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "'pending'",
+			"generated": null,
+			"name": "status",
+			"entityType": "columns",
+			"table": "event_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "local_event_id",
+			"entityType": "columns",
+			"table": "event_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "payload",
+			"entityType": "columns",
+			"table": "event_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "error_message",
+			"entityType": "columns",
+			"table": "event_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "created_at",
+			"entityType": "columns",
+			"table": "event_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "last_attempt_at",
+			"entityType": "columns",
+			"table": "event_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "id",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "server_id",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "viewer_id",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "title",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "''",
+			"generated": null,
+			"name": "description",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "venue",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "host_label",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "integer",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "0",
+			"generated": null,
+			"name": "registration_count",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "integer",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "created_by_user",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "invite_code",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "integer",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "capacity",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "start_at",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "end_at",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "'synced'",
+			"generated": null,
+			"name": "sync_status",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "created_at",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "updated_at",
+			"entityType": "columns",
+			"table": "local_event"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "event_id",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "viewer_id",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "user_id",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "name",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "image",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "''",
+			"generated": null,
+			"name": "headline",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "''",
+			"generated": null,
+			"name": "bio",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "'[]'",
+			"generated": null,
+			"name": "links",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "role",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "integer",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "false",
+			"generated": null,
+			"name": "is_current_user",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "last_seen_at",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "updated_at",
+			"entityType": "columns",
+			"table": "local_event_attendee"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "id",
+			"entityType": "columns",
+			"table": "local_profile"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "name",
+			"entityType": "columns",
+			"table": "local_profile"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "email",
+			"entityType": "columns",
+			"table": "local_profile"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "image",
+			"entityType": "columns",
+			"table": "local_profile"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "''",
+			"generated": null,
+			"name": "headline",
+			"entityType": "columns",
+			"table": "local_profile"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "''",
+			"generated": null,
+			"name": "bio",
+			"entityType": "columns",
+			"table": "local_profile"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "'[]'",
+			"generated": null,
+			"name": "links",
+			"entityType": "columns",
+			"table": "local_profile"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "'synced'",
+			"generated": null,
+			"name": "sync_status",
+			"entityType": "columns",
+			"table": "local_profile"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "created_at",
+			"entityType": "columns",
+			"table": "local_profile"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "updated_at",
+			"entityType": "columns",
+			"table": "local_profile"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "id",
+			"entityType": "columns",
+			"table": "profile_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "viewer_id",
+			"entityType": "columns",
+			"table": "profile_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": "'pending'",
+			"generated": null,
+			"name": "status",
+			"entityType": "columns",
+			"table": "profile_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "payload",
+			"entityType": "columns",
+			"table": "profile_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "error_message",
+			"entityType": "columns",
+			"table": "profile_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "created_at",
+			"entityType": "columns",
+			"table": "profile_mutation"
+		},
+		{
+			"type": "text",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"name": "last_attempt_at",
+			"entityType": "columns",
+			"table": "profile_mutation"
+		},
+		{
+			"columns": ["event_id", "user_id"],
+			"nameExplicit": false,
+			"name": "local_event_attendee_pk",
+			"entityType": "pks",
+			"table": "local_event_attendee"
+		},
+		{
+			"columns": ["id"],
+			"nameExplicit": false,
+			"name": "event_mutation_pk",
+			"table": "event_mutation",
+			"entityType": "pks"
+		},
+		{
+			"columns": ["id"],
+			"nameExplicit": false,
+			"name": "local_event_pk",
+			"table": "local_event",
+			"entityType": "pks"
+		},
+		{
+			"columns": ["id"],
+			"nameExplicit": false,
+			"name": "local_profile_pk",
+			"table": "local_profile",
+			"entityType": "pks"
+		},
+		{
+			"columns": ["id"],
+			"nameExplicit": false,
+			"name": "profile_mutation_pk",
+			"table": "profile_mutation",
+			"entityType": "pks"
+		},
+		{
+			"columns": [
+				{
+					"value": "viewer_id",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "event_mutation_viewer_id_idx",
+			"entityType": "indexes",
+			"table": "event_mutation"
+		},
+		{
+			"columns": [
+				{
+					"value": "status",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "event_mutation_status_idx",
+			"entityType": "indexes",
+			"table": "event_mutation"
+		},
+		{
+			"columns": [
+				{
+					"value": "created_at",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "event_mutation_created_at_idx",
+			"entityType": "indexes",
+			"table": "event_mutation"
+		},
+		{
+			"columns": [
+				{
+					"value": "server_id",
+					"isExpression": false
+				}
+			],
+			"isUnique": true,
+			"where": null,
+			"origin": "manual",
+			"name": "local_event_server_id_idx",
+			"entityType": "indexes",
+			"table": "local_event"
+		},
+		{
+			"columns": [
+				{
+					"value": "viewer_id",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "local_event_viewer_id_idx",
+			"entityType": "indexes",
+			"table": "local_event"
+		},
+		{
+			"columns": [
+				{
+					"value": "start_at",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "local_event_start_at_idx",
+			"entityType": "indexes",
+			"table": "local_event"
+		},
+		{
+			"columns": [
+				{
+					"value": "end_at",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "local_event_end_at_idx",
+			"entityType": "indexes",
+			"table": "local_event"
+		},
+		{
+			"columns": [
+				{
+					"value": "event_id",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "local_event_attendee_event_id_idx",
+			"entityType": "indexes",
+			"table": "local_event_attendee"
+		},
+		{
+			"columns": [
+				{
+					"value": "viewer_id",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "local_event_attendee_viewer_id_idx",
+			"entityType": "indexes",
+			"table": "local_event_attendee"
+		},
+		{
+			"columns": [
+				{
+					"value": "user_id",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "local_event_attendee_user_id_idx",
+			"entityType": "indexes",
+			"table": "local_event_attendee"
+		},
+		{
+			"columns": [
+				{
+					"value": "sync_status",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "local_profile_sync_status_idx",
+			"entityType": "indexes",
+			"table": "local_profile"
+		},
+		{
+			"columns": [
+				{
+					"value": "viewer_id",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "profile_mutation_viewer_id_idx",
+			"entityType": "indexes",
+			"table": "profile_mutation"
+		},
+		{
+			"columns": [
+				{
+					"value": "status",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "profile_mutation_status_idx",
+			"entityType": "indexes",
+			"table": "profile_mutation"
+		},
+		{
+			"columns": [
+				{
+					"value": "created_at",
+					"isExpression": false
+				}
+			],
+			"isUnique": false,
+			"where": null,
+			"origin": "manual",
+			"name": "profile_mutation_created_at_idx",
+			"entityType": "indexes",
+			"table": "profile_mutation"
+		}
+	],
+	"renames": []
+}

@@ -1,0 +1,137 @@
+---
+import { supportEmail } from "../config/contact";
+import LegalLayout from "../layouts/LegalLayout.astro";
+---
+
+<LegalLayout
+    title="Support"
+    description="Help with accounts, events, profiles, privacy controls, safety tools, and the live nearby-discovery experience."
+    lastUpdated="August 31, 2026"
+>
+    <section>
+        <h2>Getting started</h2>
+        <p>
+            AReach is used inside closed professional events. Create an event
+            and share its invite code with guests, or join an existing event
+            with the code provided by the event host.
+        </p>
+    </section>
+
+    <section>
+        <h2>Account and privacy</h2>
+
+        <h3>How do I delete my account?</h3>
+        <p>
+            In AReach, open <strong>Profile → Account → Delete Account</strong>.
+            Confirm with your current password and then confirm the permanent
+            deletion prompt. Account deletion cannot be undone; email is not
+            required for the normal deletion flow.
+        </p>
+
+        <h3>How do I hide my profile from nearby attendees?</h3>
+        <p>
+            Open <strong>Profile → Privacy</strong> and turn{" "}
+            <strong>Visible to nearby attendees</strong> off. You remain a
+            participant in your events and can still see and edit your own
+            profile, but your AReach identity and profile are hidden from other
+            attendees in attendee lists, nearby results, distance displays,
+            and camera cards. Event counts may still include you, and the event
+            host cannot override the setting.
+        </p>
+
+        <h3>How do I report an attendee?</h3>
+        <p>
+            During a live event, open the attendee’s profile, open the{" "}
+            <strong>More attendee actions</strong> menu (⋯), and choose{" "}
+            <strong>Report attendee</strong>. Select the reason that best
+            describes the issue and choose <strong>Submit Report</strong>.
+            Available reasons include inappropriate profile content, harassment
+            or abusive behavior, impersonation, spam, and other.
+        </p>
+
+        <h3>How do I block or unblock an attendee?</h3>
+        <p>
+            During a live event, open the attendee’s profile, open the{" "}
+            <strong>More attendee actions</strong> menu (⋯), and choose{" "}
+            <strong>Block attendee</strong>. Confirm the prompt. AReach then
+            hides the two users from each other’s attendee discovery, profiles,
+            nearby results, distances, and camera cards. To unblock someone,
+            open <strong>Profile → Blocked Users</strong> and choose{" "}
+            <strong>Unblock</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h2>Events and nearby discovery</h2>
+
+        <h3>How do I create an event?</h3>
+        <p>
+            Open the Create flow, provide the event title, description, date,
+            time, venue, and capacity, then complete the event setup. Share the
+            generated invite code with attendees.
+        </p>
+
+        <h3>How do I join an event?</h3>
+        <p>
+            From the app’s join flow, enter the invite code shared by the host.
+            You must be authenticated, and the event must still be available
+            for registration.
+        </p>
+
+        <h3>How does nearby discovery work?</h3>
+        <p>
+            During a live event, AReach can use the camera, ARKit, Bluetooth,
+            Local Network services, and Apple Nearby Interaction to show eligible
+            nearby attendees on a compatible iPhone. Both people need to be
+            participating in the same live event, and the relevant permissions
+            and device capabilities must be available. Nearby discovery is not
+            a GPS or general people-finding service.
+        </p>
+
+        <h3>Why can’t I see an attendee or camera overlay?</h3>
+        <p>
+            Check that you are in the same live event and have joined or checked
+            in. In iOS Settings, allow AReach the Camera, Bluetooth, Local
+            Network, and Nearby Interaction access requested by the live
+            feature. Also check that the other attendee has not turned off{" "}
+            <strong>Visible to nearby attendees</strong> and that you do not
+            have a blocking relationship. Camera conditions, AR tracking,
+            device compatibility, distance, and the other device’s current
+            availability can also affect overlays.
+        </p>
+        <p>
+            AReach intentionally does not reveal whether a particular attendee
+            is hidden because of a privacy setting, blocking, event state, or
+            temporary availability. Refresh the event or leave and re-enter the
+            live experience after checking the conditions above.
+        </p>
+
+        <h3>How do I update my profile?</h3>
+        <p>
+            Open Profile and choose <strong>Edit Profile</strong>. You can
+            update your name, headline, and “Ask me about…” topics. These
+            conversation cues are shown only in event contexts where your
+            attendee profile is visible.
+        </p>
+    </section>
+
+    <section>
+        <h2>Contact and safety</h2>
+        <p>
+            For technical support, privacy questions, access or correction
+            requests, or safety concerns that you cannot report in the app,
+            email <a href={`mailto:${supportEmail}`}>{supportEmail}</a>. Include
+            enough detail for us to understand the issue, but never send your
+            password or authentication codes.
+        </p>
+        <p>
+            If you are in immediate danger, contact local emergency services.
+            The in-app report and block tools are not emergency services.
+        </p>
+        <p>
+            Read the <a href="/privacy">Privacy Policy</a> for data practices
+            and the <a href="/terms">Terms of Service</a> for the rules
+            governing use of AReach.
+        </p>
+    </section>
+</LegalLayout>

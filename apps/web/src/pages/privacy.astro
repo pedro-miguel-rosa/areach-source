@@ -1,0 +1,337 @@
+---
+import { supportEmail } from "../config/contact";
+import LegalLayout from "../layouts/LegalLayout.astro";
+---
+
+<LegalLayout
+    title="Privacy Policy"
+    description="How AReach collects, uses, shares, and protects information when you use the app and related services."
+    lastUpdated="August 31, 2026"
+>
+    <section>
+        <h2>1. About this policy</h2>
+        <p>
+            This Privacy Policy explains how AReach handles information when
+            you use the AReach mobile application, our website, or services
+            that link to this policy. AReach is designed for event-scoped
+            social discovery: people join a shared event, choose what to
+            include in their profile, and discover eligible attendees during
+            that event.
+        </p>
+        <p>
+            By using AReach, you acknowledge the practices described here. If
+            you do not agree with this policy, do not use AReach.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Information we collect</h2>
+
+        <h3>Account and authentication information</h3>
+        <ul>
+            <li>Your name and email address.</li>
+            <li>
+                Account verification information and records used for
+                password authentication, password resets, and email-address
+                changes.
+            </li>
+            <li>
+                Authentication session information, including session
+                identifiers, expiry information, and security metadata such as
+                an IP address and user-agent string when available.
+            </li>
+        </ul>
+        <p>
+            Password credentials are used to authenticate your account. Your
+            password, authentication tokens, and account-security information
+            are not shown to other attendees. Do not send passwords or
+            authentication codes to support.
+        </p>
+
+        <h3>Profile and user-generated content</h3>
+        <p>
+            You may provide a profile name, headline, and “Ask me about…”
+            topics. An image associated with your account may also be present
+            in your profile where available. You may also submit event content,
+            including an event title, description, venue, capacity, dates, and
+            times.
+        </p>
+
+        <h3>Event and attendance information</h3>
+        <p>
+            We store events that you create, invite codes, registrations,
+            event membership, host or attendee role, check-in and join
+            information, and recent live attendance information such as when an
+            attendee was last seen. Invite codes are used to join and share an
+            event; they are not described or treated by the app as a
+            substitute for a password.
+        </p>
+
+        <h3>Nearby and augmented-reality information</h3>
+        <p>
+            During a live event, AReach may use Apple Nearby Interaction,
+            Bluetooth, Local Network services, and ARKit on a compatible iPhone
+            to identify participating event devices and estimate relative
+            proximity or direction. The service uses temporary,
+            event-scoped credentials, peer identifiers, and public-key data for
+            this process. Nearby Interaction is not GPS, and AReach does not
+            use this feature to create a general location history.
+        </p>
+        <p>
+            In the production camera flow, camera frames are read on your
+            iPhone by ARKit and on-device Vision/body-detection code to position
+            attendee overlays. The inspected production path does not upload or
+            persist raw camera video, raw camera frames, or microphone audio as
+            part of this live detection feature. The app configuration does not
+            request a microphone or location permission for this feature.
+        </p>
+
+        <h3>Support</h3>
+        <p>
+            If you contact us, we receive the information you include in your
+            message.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. How we use information</h2>
+        <ul>
+            <li>
+                To create and protect your account and send verification,
+                password-reset, and email-change messages.
+            </li>
+            <li>
+                To create, join, manage, and display events, registrations, and
+                attendance.
+            </li>
+            <li>
+                To display event-scoped attendee profiles and live presence to
+                eligible participants under the visibility rules below.
+            </li>
+            <li>
+                To issue temporary nearby-device credentials and provide the
+                live spatial experience.
+            </li>
+            <li>
+                To respond to support requests, receive safety reports, prevent
+                misuse, and maintain service security.
+            </li>
+        </ul>
+        <p>
+            AReach does not sell personal information and the current mobile
+            and website code does not use advertising SDKs to track you across
+            other apps or websites.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Discoverability and what other people can see</h2>
+        <p>
+            Within an event, eligible participants may see limited attendee
+            information such as a visible name, image where available,
+            headline, “Ask me about…” topics, host or attendee role, and live
+            presence. Approximate distance or proximity may be shown when the
+            live experience makes it available. Email addresses, passwords,
+            authentication tokens, and private account-security information are
+            not shown to attendees.
+        </p>
+        <p>
+            The app setting is named <strong>Visible to nearby attendees</strong>.
+            When it is turned off in Profile → Privacy, you remain a member of
+            your events and can still see and edit your own profile, but AReach
+            hides your attendee identity and profile from other attendees in
+            attendee lists, profile details, nearby results, proximity or
+            distance presentations, and camera overlays. Event hosts cannot
+            override this choice. Aggregate event registration or attendee
+            counts may still include you because a count is not an identity
+            discovery result.
+        </p>
+        <p>
+            This setting controls AReach profile and identity discoverability;
+            it does not promise that a physical device is invisible to every
+            underlying Bluetooth or Nearby Interaction protocol, and it does
+            not make you physically absent from an event.
+        </p>
+        <p>
+            AReach applies these rules on the server for event attendee lists,
+            profile details, registrations, and nearby identity resolution. A
+            participant must be associated with the event, and the server
+            checks the target’s discoverability setting and blocking
+            relationships before returning identity information.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Blocking</h2>
+        <p>
+            You can block another attendee from that attendee’s profile during
+            a live event. While the block is in place, AReach mutually hides
+            the two users from attendee discovery, profile access, nearby
+            identity results, proximity or distance displays, and camera
+            cards. Blocking changes what AReach reveals; it does not prevent
+            two people from being physically near one another.
+        </p>
+        <p>
+            You can review your blocked users and choose <strong>Unblock</strong>{" "}
+            from Profile → Blocked Users. An independent block made by the
+            other person is not changed by your unblock action.
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Reports and safety</h2>
+        <p>
+            You can report another attendee from within a live event. The
+            selected reason can be inappropriate profile content, harassment or
+            abusive behavior, impersonation, spam, or other. A report records
+            the reporting account, reported account, event, selected reason,
+            status, and creation and update timestamps. The service prevents a
+            duplicate report for the same reporter, attendee, and event.
+        </p>
+        <p>
+            Reports are used for safety and moderation. A new report may notify
+            an internal moderation recipient when that notification is
+            configured. Report status can be pending, reviewed, resolved, or
+            dismissed; AReach does not promise a particular review time or
+            outcome.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Website technologies and service providers</h2>
+        <p>
+            The public website does not require an AReach login and its current
+            source contains no analytics scripts, tracking pixels, or
+            advertising SDKs. It uses browser localStorage only to remember
+            the visitor’s light or dark theme preference. The current website
+            does not set an AReach analytics or advertising cookie.
+        </p>
+        <p>
+            Requests for public website pages are handled by Cloudflare and may
+            include ordinary connection metadata such as an IP address,
+            user-agent, requested path, and request time for delivery and
+            security. The repository does not define a separate retention
+            period for that metadata.
+        </p>
+        <p>
+            The homepage loads a QR-code image from{" "}
+            <code>api.qrserver.com</code> so visitors can open AReach in the App
+            Store. That image request can expose standard connection metadata
+            such as an IP address and user-agent to that provider, and includes
+            the public App Store URL in the request. It does not include your
+            AReach account or attendee data. Selecting an App Store link takes
+            you to Apple, which processes that visit under Apple’s policies.
+        </p>
+        <p>
+            We use Cloudflare Workers, website assets, network services, and
+            Cloudflare Hyperdrive to operate the website and API. Hyperdrive
+            connects the API to a PostgreSQL database. Cloudflare Email
+            Sending delivers account verification, password-reset,
+            email-change, and, when configured, internal report-notification
+            messages. Cloudflare and the database infrastructure process the
+            information needed to provide these services. The repository does
+            not identify the underlying PostgreSQL hosting company.
+        </p>
+        <p>
+            The app uses Apple system frameworks such as ARKit and Nearby
+            Interaction for device-side live features. Better Auth, Drizzle,
+            Expo, and React Native are software components used by AReach; the
+            repository does not show them as separate AReach data recipients.
+        </p>
+        <p>
+            We may disclose information when required by law, to protect the
+            rights or safety of users and the service, or to investigate fraud,
+            abuse, or security incidents. We do not share attendee profile
+            information with people who are not authorized participants in the
+            relevant event.
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Retention and deletion</h2>
+        <p>
+            The repository does not define one fixed retention period for all
+            data. We retain active account, profile, event, registration, and
+            attendance records for as long as needed to provide AReach, support
+            security, resolve disputes, comply with legal obligations, and
+            maintain event history. Authentication sessions expire according to
+            their configured lifetime. Leaving an event removes the active
+            check-in and nearby attendance record, while the registration and
+            event record may remain.
+        </p>
+        <p>
+            Blocks and attendee reports are stored for the privacy and safety
+            functions described above. Under the current database relationships
+            they are deleted when the relevant user is deleted, and reports
+            also follow deletion of their event. Evaluation records have a
+            separate study relationship: where the study protocol requires it,
+            previously collected server-side evaluation records may remain with
+            their account foreign key removed. The app clears local evaluation
+            records during account deletion.
+        </p>
+        <p>
+            To permanently delete your account, open Profile → Account →{" "}
+            <strong>Delete Account</strong> in AReach and confirm with your
+            password. This is the normal deletion path and cannot be undone.
+            The server deletes the account and the account-linked profile,
+            hosted events, event registrations and attendance records, nearby
+            credentials, blocks, and attendee reports according to the current
+            deletion relationships. Hosted-event deletion also removes related
+            event records. The app stops nearby activity, clears account-scoped
+            local event, profile, privacy, and evaluation data, and clears the
+            stored authenticated session. If local cleanup cannot complete, the
+            app displays a notice with further guidance.
+        </p>
+        <p>
+            The app’s deletion flow does not require an email request. Contact{" "}
+            <a href={`mailto:${supportEmail}`}>{supportEmail}</a> for privacy
+            questions, access or correction requests, support, or other data
+            questions. We may need to verify your identity and may retain
+            information where required for security or law.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Permissions and security</h2>
+        <p>
+            AReach requests camera, Bluetooth, Local Network, and Nearby
+            Interaction permissions only when the related live features need
+            them. You can deny or later revoke these permissions in iOS
+            Settings, although the related features may not work without them.
+        </p>
+        <p>
+            We use HTTPS, authenticated requests, access controls, and
+            event-scoped credentials to protect information. No internet
+            service can guarantee absolute security, so use a strong unique
+            password and notify us if you suspect unauthorized access.
+        </p>
+    </section>
+
+    <section>
+        <h2>10. Children</h2>
+        <p>
+            AReach is intended for professional events and is not directed to
+            children under 13. We do not knowingly collect personal information
+            from children under 13. If you believe a child has provided
+            personal information to us, contact us so that we can investigate
+            and delete it where appropriate.
+        </p>
+    </section>
+
+    <section>
+        <h2>11. Changes to this policy</h2>
+        <p>
+            We may update this policy when AReach’s features, data practices, or
+            legal obligations change. We will update the date at the top of this
+            page and, where appropriate, provide additional notice in the app.
+        </p>
+    </section>
+
+    <section>
+        <h2>12. Contact</h2>
+        <p>
+            For privacy questions or requests, contact{" "}
+            <a href={`mailto:${supportEmail}`}>{supportEmail}</a>.
+        </p>
+    </section>
+</LegalLayout>

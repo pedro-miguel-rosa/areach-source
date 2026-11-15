@@ -1,0 +1,2 @@
+export const MAX_ASK_ME_ABOUT_TOPICS = 5;
+export const MAX_ASK_ME_ABOUT_TOPIC_LENGTH = 40;

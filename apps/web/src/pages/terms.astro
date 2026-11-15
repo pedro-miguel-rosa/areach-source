@@ -1,0 +1,175 @@
+---
+import { supportEmail } from "../config/contact";
+import LegalLayout from "../layouts/LegalLayout.astro";
+---
+
+<LegalLayout
+    title="Terms of Service"
+    description="The rules for creating accounts, participating in events, and using AReach’s live discovery features."
+    lastUpdated="August 31, 2026"
+>
+    <section>
+        <h2>1. Acceptance</h2>
+        <p>
+            These Terms of Service govern your use of the AReach application,
+            website, and related services. By using AReach, you agree to these
+            Terms and the <a href="/privacy">Privacy Policy</a>. If you do not
+            agree, do not use the service.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Eligibility and accounts</h2>
+        <p>
+            AReach is intended for professional event participants and is not
+            directed to children under 13. You are responsible for providing
+            accurate account information, protecting your password, and all
+            activity performed through your account. Do not share your password
+            or authentication codes with another person.
+        </p>
+        <p>
+            You must notify us promptly if you believe your account has been
+            accessed without permission. We may suspend access when necessary
+            to protect users, events, or the service.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Events and user content</h2>
+        <p>
+            Event hosts are responsible for providing accurate event
+            information and sharing invite codes only with the people they
+            intend to invite. Participants are responsible for the information
+            they choose to include in their profiles and events, including
+            names, headlines, “Ask me about…” topics, titles, descriptions,
+            venues, and schedules. Submit only content that you have the right
+            to provide and that you are comfortable sharing in the relevant
+            event.
+        </p>
+        <p>
+            AReach displays eligible attendee information within the relevant
+            event to support face-to-face discovery. You retain your rights in
+            the content you provide, and grant AReach the limited permission
+            needed to store, process, and display it to provide the event and
+            attendee features you use. Do not use AReach to collect, copy, or
+            distribute another participant’s information outside the event
+            without their permission.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Acceptable use</h2>
+        <p>You may not use AReach to:</p>
+        <ul>
+            <li>
+                Harass, threaten, impersonate, stalk, or discriminate against
+                another person.
+            </li>
+            <li>Share unlawful, abusive, misleading, or infringing content.</li>
+            <li>
+                Attempt to access events, accounts, credentials, or data without
+                authorization.
+            </li>
+            <li>
+                Reverse engineer, disrupt, overload, or interfere with the
+                service or nearby-device protocols.
+            </li>
+            <li>
+                Use the live camera experience in a dangerous situation,
+                including while driving or operating machinery.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5. Camera and nearby features</h2>
+        <p>
+            The live experience depends on compatible Apple hardware, ARKit
+            tracking, camera access, Bluetooth or Local Network access, Nearby
+            Interaction permissions, event membership, and the availability of
+            other participating devices. These features may be limited,
+            interrupted, or unavailable in some environments. AReach does not
+            guarantee that every attendee will be detected or that every
+            overlay will appear continuously.
+        </p>
+        <p>
+            You control whether to grant the relevant iOS permissions. The live
+            camera feature processes camera frames on-device and is not a
+            substitute for ordinary awareness of your surroundings.
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Safety tools and privacy controls</h2>
+        <p>
+            You can report another attendee from within a live event and choose
+            a reason such as inappropriate profile content, harassment or
+            abusive behavior, impersonation, spam, or other. AReach may review a
+            report and may take reasonable action, including limiting,
+            suspending, or terminating access when necessary to protect users or
+            the service. We do not guarantee a particular response time or
+            outcome.
+        </p>
+        <p>
+            You can block an attendee and later manage your blocked users from
+            the app. A block hides the two users from each other in AReach
+            discovery and nearby profile presentations. You can also control
+            whether your profile is visible to nearby attendees. See the{" "}
+            <a href="/privacy">Privacy Policy</a> for the details of these
+            controls and the information AReach processes.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Intellectual property</h2>
+        <p>
+            AReach and its software, branding, design, and service materials are
+            owned by AReach or its licensors and are protected by applicable
+            intellectual-property laws. These Terms give you a limited,
+            non-exclusive, non-transferable right to use the service for its
+            intended purpose.
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Availability and changes</h2>
+        <p>
+            We may change, suspend, or discontinue parts of AReach, including
+            individual event or nearby-discovery features. We may update these
+            Terms when the service or legal requirements change. The updated
+            version will be posted on this page with a new date.
+        </p>
+        <p>
+            AReach is provided on an “as available” basis. To the extent
+            permitted by law, we do not guarantee that the service will be
+            uninterrupted, error-free, or available on every device or network.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Ending use and account deletion</h2>
+        <p>
+            You may log out or stop using AReach at any time. Logging out or
+            stopping use does not by itself delete your account or stored event
+            history. To permanently delete your account, use{" "}
+            <strong>Profile → Account → Delete Account</strong> in the app. The
+            deletion process and any study-record exception are described in
+            the <a href="/privacy">Privacy Policy</a>.
+        </p>
+        <p>
+            We may suspend or terminate access if you violate these Terms,
+            create a security or safety risk, or if continued access is no
+            longer practical. Sections that should reasonably survive
+            termination, including privacy and intellectual property, will
+            continue to apply.
+        </p>
+    </section>
+
+    <section>
+        <h2>10. Contact</h2>
+        <p>
+            Questions about these Terms can be sent to{" "}
+            <a href={`mailto:${supportEmail}`}>{supportEmail}</a>.
+        </p>
+    </section>
+</LegalLayout>
